@@ -170,6 +170,28 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 pessoa.apresentacao = function(){
+//FORMA CORRETA
+pessoa.apresentacao = function(){
+	car sexo = 'o';
+	var idadeAnos = 'anos';
+	var metrosCaminhados = 'metros';
+
+	if (pessoa.sexo === 'feminino') {
+		sexo = 'a';
+	}
+
+	if (pessoa.idade === 1) {
+		var idadeAnos = 'ano';
+	} 
+	
+	if (pessoa.caminhoQuantosMetros === 1) {
+		var metrosCaminhados = 'metro';
+	} 
+	
+	return 'Olá, eu sou ' + sexo + ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ' + idadeAnos + , ' + pessoa.altura + 'm , meu peso é ' + pessoa.peso + ' kg e, só hoje, eu já caminhei ' + pessoa.caminhoQuantosMetros + ' ' + metrosCaminhados  + '!'
+};
+
+/* COMO EU FIZ SEM AS VARIÁVEIS
 	if (pessoa.sexo === 'feminino') {
 		return 'Olá, eu sou a ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' anos, ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhoQuantosMetros + ' metros!'	
 	} else if (pessoa.idade === 1) {
@@ -179,7 +201,7 @@ pessoa.apresentacao = function(){
 	} else {
 		return 'Olá, eu sou o ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' anos, ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhoQuantosMetros + ' metros!'
     }
-}
+}*/
 
 // Agora, apresente-se ;)
 pessoa.apresentacao() // "Olá, eu sou o Emerson Paixão, tenho 38 anos, 1.86, meu peso é 68 e, só hoje, eu já caminhei 45 metros!"
