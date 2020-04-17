@@ -113,7 +113,9 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 "Só cabem mais [QUANTIDADE_DE_PESSOAS_QUE_CABEM] pessoas!"
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
-*/
+
+RESOLUÇÃO:
+PRIMEIRA RESOLUÇÃO:
 carro.adicionarPessoas = function(nroPessoas) {
 	var frase;
 	var qtdLugaresLivres = carro.assentos - carro.quantidadePessoas;
@@ -133,8 +135,28 @@ carro.adicionarPessoas = function(nroPessoas) {
     }
 }
 
-/*
-FORMA FEITA PELO PROFESSOR QUE POSSOBILITA RETIRAR PESSOAS DO CARRO
+APÓS VERIFICAR CORREÇÃO DO PROFESSOR
+carro.adicionarPessoas = function(nroPessoas) {
+	var qtdLugaresLivres = carro.assentos - carro.quantidadePessoas;
+	var pessoa = 'pessoas';
+	
+	if (carro.quantidadePessoas === carro.assentos) {
+		return	'O carro já está lotado!';
+    }
+
+	if ( qtdLugaresLivres < nroPessoas) {
+		if (qtdLugaresLivres === 1 ) {
+			pessoa = 'pessoa';
+			return 'Só cabem mais ' + qtdLugaresLivres + ' ' + pessoa + '!';
+        }
+		return 'Só cabem mais ' + qtdLugaresLivres + ' ' + pessoa + '!';
+    }
+        carro.quantidadePessoas += nroPessoas;
+        return 'Já temos '+ carro.quantidadePessoas + ' pessoas no carro!';
+}
+*/
+
+//FORMA FEITA PELO PROFESSOR QUE POSSOBILITA RETIRAR PESSOAS DO CARRO
 carro.adicionarPessoas = function(nroPessoas) {
 	var totalPessoas = carro.quantidadePessoas + nroPessoas;
 	var qtdLugaresLivres = carro.assentos - carro.quantidadePessoas;
@@ -150,8 +172,6 @@ carro.adicionarPessoas = function(nroPessoas) {
     }
 	carro.quantidadePessoas += nroPessoas;
         return 'Já temos '+ carro.quantidadePessoas + ' pessoas no carro!';
-*/
-
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
