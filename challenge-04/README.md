@@ -64,28 +64,28 @@ var carro = {
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-carro.mudarCor = function(novaCor){
+carro.mudarCor = function(novaCor) {
 	carro.cor = novaCor;
 }
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-carro.obterCor = function(){
+carro.obterCor = function() {
 	return carro.cor;
 }
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-carro.obterModelo = function(){
+carro.obterModelo = function() {
 	return carro.modelo;
 }
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-carro.obterMarca = function(){
+carro.obterMarca = function() {
 	return carro.marca;
 }
 
@@ -114,7 +114,7 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-carro.adicionarPessoas = function(nroPessoas){
+carro.adicionarPessoas = function(nroPessoas) {
 	var frase;
 	var qtdLugaresLivres = carro.assentos - carro.quantidadePessoas;
 	var pessoa = 'pessoas';
@@ -135,7 +135,7 @@ carro.adicionarPessoas = function(nroPessoas){
 
 /*
 FORMA FEITA PELO PROFESSOR QUE POSSOBILITA RETIRAR PESSOAS DO CARRO
-carro.adicionarPessoas = function(nroPessoas){
+carro.adicionarPessoas = function(nroPessoas) {
 	var totalPessoas = carro.quantidadePessoas + nroPessoas;
 	var qtdLugaresLivres = carro.assentos - carro.quantidadePessoas;
 	
