@@ -116,10 +116,10 @@ citado acima, no lugar de "pessoas".
 */
 carro.adicionarPessoas = function(nroPessoas){
 	var frase;
-	var qtdLugares = carro.assentos - carro.quantidadePessoas;
+	var qtdLugaresLivres = carro.assentos - carro.quantidadePessoas;
 	var pessoa = 'pessoas';
 	carro.quantidadePessoas === carro.assentos ? frase = 'O carro já está lotado!' : frase = '';
-	if ( qtdLugares < nroPessoas) {
+	if ( qtdLugaresLivres < nroPessoas) {
 		if (pessoa === 1 ) {
 			pessoa = 'pessoa';
 			return 'Só cabem mais ' + qtdLugares + ' ' + pessoa + '!';
