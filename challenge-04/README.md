@@ -134,6 +134,26 @@ carro.adicionarPessoas = function(nroPessoas){
 }
 
 /*
+FORMA FEITA PELO PROFESSOR QUE POSSOBILITA RETIRAR PESSOAS DO CARRO
+carro.adicionarPessoas = function(nroPessoas){
+	var totalPessoas = carro.quantidadePessoas + nroPessoas;
+	var qtdLugaresLivres = carro.assentos - carro.quantidadePessoas;
+	
+	if (carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos) { // A SEGUNDA CONDIÇÃO PERMITE RETIRAR PESSOAS DO CARRO
+		return	'O carro já está lotado!';
+
+	if ( qtdLugaresLivres < nroPessoas) {
+		var pessoa = qtdLugaresLivres === 1 ? ' pessoa' : ' pessoas'
+		return 'Só cabem mais ' + qtdLugaresLivres + ' ' + pessoa + '!';
+        }
+		
+    }
+	carro.quantidadePessoas += nroPessoas;
+        return 'Já temos '+ carro.quantidadePessoas + ' pessoas no carro!';
+*/
+
+
+/*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
 utilize sempre o formato de invocação do método (ou chamada da propriedade),
 adicionando comentários _inline_ ao lado com o valor retornado, se o método
@@ -168,7 +188,7 @@ carro.adicionarPessoas(4); // "Só cabem mais 3 pessoas!"
 carro.adicionarPessoas(3); // "Já temos 5 pessoas no carro!"
 
 // Tire 4 pessoas do carro.
-carro.quantidadePessoas = 1;
+carro.adicionarPessoas(-4); // "Já temos 1 pessoas no carro!"
 
 // Adicione 10 pessoas no carro.
 carro.adicionarPessoas(10); // "Só cabem mais 4 pessoas!"
