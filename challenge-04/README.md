@@ -159,19 +159,20 @@ carro.adicionarPessoas = function(nroPessoas) {
 //FORMA FEITA PELO PROFESSOR QUE POSSOBILITA RETIRAR PESSOAS DO CARRO
 carro.adicionarPessoas = function(nroPessoas) {
 	var totalPessoas = carro.quantidadePessoas + nroPessoas;
-	var qtdLugaresLivres = carro.assentos - carro.quantidadePessoas;
-	
-	if (carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos) { // A SEGUNDA CONDIÇÃO PERMITE RETIRAR PESSOAS DO CARRO
-		return	'O carro já está lotado!';
+	var quantasPessoasCabem = carro.assentos - carro.quantidadePessoas;
+	var pluralOuSingular = quantasPessoasCabem === 1 ? ' pessoa' : ' pessoas' \\ CONDICIONAL TERNÁRIO
 
-	if ( qtdLugaresLivres < nroPessoas) {
-		var pessoa = qtdLugaresLivres === 1 ? ' pessoa' : ' pessoas'
-		return 'Só cabem mais ' + qtdLugaresLivres + ' ' + pessoa + '!';
+	if (carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos) {  \\ A SEGUNDA CONDIÇÃO POSSIBILITA RETIRAR PESSOAS
+		return	'O carro já está lotado!';
+	}
+
+	if ( totalPessoas > carro.assentos) {
+		return 'Só cabem mais ' + quantasPessoasCabem + ' ' + pluralOuSingular + '!';
         }
 		
-    }
 	carro.quantidadePessoas += nroPessoas;
         return 'Já temos '+ carro.quantidadePessoas + ' pessoas no carro!';
+}
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
