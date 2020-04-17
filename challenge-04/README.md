@@ -122,9 +122,9 @@ carro.adicionarPessoas = function(nroPessoas){
 	if ( qtdLugaresLivres < nroPessoas) {
 		if (pessoa === 1 ) {
 			pessoa = 'pessoa';
-			return 'Só cabem mais ' + qtdLugares + ' ' + pessoa + '!';
+			return 'Só cabem mais ' + qtdLugaresLivres + ' ' + pessoa + '!';
         }
-		return 'Só cabem mais ' + qtdLugares + ' ' + pessoa + '!';
+		return 'Só cabem mais ' + qtdLugaresLivres + ' ' + pessoa + '!';
     }
 	else {
         carro.quantidadePessoas += nroPessoas;
